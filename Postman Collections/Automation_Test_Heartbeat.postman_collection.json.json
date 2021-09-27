@@ -1,0 +1,49 @@
+{
+  "info": {
+    "_postman_id": "eec3ff50-8190-453c-ac8f-6dd9891263e5",
+    "name": "Automation_Test_Heartbeat",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "HeartBeat",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "2c25fe59-b54f-4df7-a2c1-5eac01f18fb2",
+            "exec": [
+              "pm.test(\"Response time is less than 200ms\", function () {\r",
+              "    pm.expect(pm.response.responseTime).to.be.below(3000);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "_postman_id": "01b42801-0dfc-487f-8a03-b3bd5c768e9d",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"AGENT_DATA\": {\r\n        \"AGENT_ID\": \"agent141\",\r\n        \"AGENT_INFO\": {\r\n            \"AGENT_ADDR\": \"172.19.112.141\",\r\n            \"AGENT_VERSION\": \"1.0\"\r\n        },\r\n        \"AGENT_STATS\": {\r\n            \"DATA_MOVE_STATS\": {\r\n                \"NUMBER_OF_FILES\": 10,\r\n                \"SIZE_OF_DATA_MB\": 100\r\n            },\r\n            \"DATA_MOVE_DESTINATION\": \"/mnt/nfs/general\"\r\n        }\r\n    }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://10.244.14.32:5888/edgeManager/agent/v1/heartbeat"
+      },
+      "response": []
+    }
+  ]
+}
