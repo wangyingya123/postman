@@ -19,13 +19,17 @@
               "\r",
               "pm.test(\"Status code is 200\", function () {\r",
               "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Status code is 400\", function () {\r",
+              "    pm.response.to.have.status(400);\r",
               "});"
             ],
             "type": "text/javascript"
           }
         }
       ],
-      "_postman_id": "dbac14aa-81c6-4502-9879-49a6896d65ca",
+      "id": "dbac14aa-81c6-4502-9879-49a6896d65ca",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
