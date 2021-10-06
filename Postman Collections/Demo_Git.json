@@ -15,13 +15,17 @@
             "exec": [
               "pm.test(\"Status code is 200\", function () {\r",
               "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
               "});"
             ],
             "type": "text/javascript"
           }
         }
       ],
-      "_postman_id": "f1ba0a6a-6179-47f7-b73d-98e4bb17af0f",
+      "id": "f1ba0a6a-6179-47f7-b73d-98e4bb17af0f",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
