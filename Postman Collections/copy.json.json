@@ -1,0 +1,37 @@
+{
+  "info": {
+    "_postman_id": "5831af4a-4f2d-400e-b926-e0fb3294fb5f",
+    "name": "Demo_Git Copy",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Demo_example_1",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "fd52e091-d932-4d28-9984-1178ba7cfae6",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              ""
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "_postman_id": "a2612d26-7c4d-4dc1-8aad-29f10a20100a",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": "http://www.twitter.com/a85/get"
+      },
+      "response": []
+    }
+  ]
+}
