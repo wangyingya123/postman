@@ -16,13 +16,16 @@
               "pm.test(\"Status code is 200\", function () {\r",
               "    pm.response.to.have.status(200);\r",
               "});\r",
-              ""
+              "\r",
+              "pm.test(\"Body matches string\", function () {\r",
+              "    pm.expect(pm.response.text()).to.include(\"string_you_want_to_search\");\r",
+              "});"
             ],
             "type": "text/javascript"
           }
         }
       ],
-      "_postman_id": "a2612d26-7c4d-4dc1-8aad-29f10a20100a",
+      "id": "a2612d26-7c4d-4dc1-8aad-29f10a20100a",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
